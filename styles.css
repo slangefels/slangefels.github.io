@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+@supports(display: grid) {
+    body {
+        background-color: #1D96BF;
+        background-image: linear-gradient(to bottom, #1D96BF, #004056);
+        background-repeat: no-repeat;
+        color: #24232A;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+        grid-area: header;
+        /*background-color: #999999;*/
+        background-image: url(placeholderImg.png);
+        background-size: auto 80%;
+        background-repeat: no-repeat;
+        background-position: 10px;
+        text-align: left;
+        padding-left: 115px;
+        padding-top: 0.5em;
+    }
+
+    nav {
+        grid-area: nav;
+        text-align: right;
+        font-weight: bold;
+        padding-right: 10px;
+        padding-top: 2em;
+    }
+
+    nav ul {
+        list-style-type: none;
+    }
+
+    main {
+        grid-area: main;
+        padding: 1em;
+    }
+
+    aside {
+        grid-area: aside;
+        background-color: #999999;
+        padding: 5px;
+        text-align: center;
+    }
+
+    footer {
+        font-size: 75%;
+        font-style: italic;
+        text-align: center;
+        background-color: #FFFFFF;
+        padding-top: 2em;
+        grid-area: footer;
+    }
+
+    /*footer ul {
+        list-style-type: none;
+    }*/
+
+    .floatImg {
+        float: left;
+        margin-right: 10px;
+    }
+
+    .featuredSection {
+        background-color: #999999;
+        border: 2px solid #24232A;
+        overflow: auto;
+        margin: 1em;
+        padding: 0.5em;
+    }
+
+    .citationSection {
+        background-color: #e7e2e2;
+        border: 2px dotted #24232A;
+        overflow: auto;
+
+        font-style: italic;
+        font-size: small;
+        
+        padding-left: 1em;
+        padding-bottom: 0.25em;
+        margin: 1em;
+    }
+
+    .hero {
+        grid-area: hero;
+    }
+
+    #wrapper {
+        background-color: #F0F0F0;
+        margin: auto;
+        width: 70%;
+        border: 1px solid #24232A;
+        /*box-shadow: 3px 3px 3px #000033;*/
+        display: grid;
+        grid-template-columns: 1fr 1fr 30%;
+        grid-template-rows: 100px 300px auto 75px;
+        grid-template-areas:
+            "header nav nav"
+            "hero hero hero"
+            "main main aside"
+            "footer footer footer";
+    }
+
+    #homehero {
+        background-image: url(homeHero.jpg);
+        background-size: 100% 200%;
+        background-repeat: no-repeat;
+    }
+}
